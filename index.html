@@ -2,139 +2,214 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VYK EDITZ</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VYK EDITZ</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <div class="page">
+    <div class="page">
 
-    <div class="hero-bg">
-      <div class="cloud-mid"></div>
+        <div class="hero-bg">
+            <div class="cloud-mid"></div>
+        </div>
+
+        <section class="hero">
+
+            <div class="logo-btn" title="VYK by Vinayak Dalbanjan">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="VYK Logo">
+                    <path d="M13.827 3.52h3.603L12 20.48 8.58 3.52h3.604L12 10.49l1.827-6.97Z" fill="white" />
+                    <path
+                        d="M6.994 3.52H3.39L.57 12l2.424 1.06L6.994 3.52Zm10.012 0h3.604L23.43 12l-2.424 1.06L17.006 3.52Z"
+                        fill="white" opacity="0.5" />
+                </svg>
+            </div>
+
+            <p class="badge">
+                <span class="badge-dot" aria-hidden="true"></span>
+                VYK — a editing organization
+            </p>
+
+            <h1>High-level Editing for<br>Future of <em>Video Editing</em></h1>
+
+            <p class="hero-sub">
+                3+ years of experience in Adobe After Effects and Premiere Pro,
+                delivering professional video editing and motion graphics.
+            </p>
+
+            <div class="form-row">
+                <label for="emailInput" class="sr-only">Your Email</label>
+                <input type="email" id="emailInput" placeholder="Your Email" autocomplete="email" spellcheck="false" />
+                <button id="joinBtn" type="button">Register</button>
+            </div>
+
+            <p class="form-error" id="formError" role="alert" aria-live="polite"></p>
+
+            <div class="social-proof" aria-label="Social proof">
+                <div class="avatars" aria-hidden="true">
+                    <span class="av av1">A</span>
+                    <span class="av av2">B</span>
+                    <span class="av av3">C</span>
+                </div>
+                Worked with 100+ Clients &amp; 10+ Agencies
+            </div>
+
+        </section>
+
+        <section class="features" aria-label="What we offer">
+
+            <div class="feature">
+                <div class="feature-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <polygon points="23 7 16 12 23 17 23 7" />
+                        <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+                    </svg>
+                </div>
+                <h3>Cinematic Editing</h3>
+                <p>Visually stunning edits with smooth transitions, color grading, and storytelling that feels like a
+                    movie.</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M5 3l14 9-14 9V3z" />
+                    </svg>
+                </div>
+                <h3>Motion Graphics</h3>
+                <p>Dynamic animations, text effects, and high-quality VFX for impactful, eye-catching content.</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <rect x="2" y="3" width="20" height="14" rx="2" />
+                        <path d="M8 21h8M12 17v4" />
+                    </svg>
+                </div>
+                <h3>Social Media Edits</h3>
+                <p>Optimized edits for Instagram, YouTube Shorts, and Reels — designed to grab attention and go viral.
+                </p>
+            </div>
+
+        </section>
+
+        <div class="divider" role="separator"></div>
+
+        <!-- ── PRICING ── -->
+        <section class="pricing" aria-label="Pricing plans">
+
+            <div class="pricing-header">
+                <h2 class="pricing-title">Editing on Demand.</h2>
+                <p class="pricing-sub">Bring your solution to life.</p>
+            </div>
+
+            <div class="pricing-grid">
+
+                <!-- Basic -->
+                <div class="plan plan-basic">
+                    <div class="plan-badge plan-badge--dark">Basic</div>
+                    <p class="plan-tagline"><span class="plan-bar"></span> 15$</p>
+                    <ul class="plan-features">
+                        <li><span class="check">✓</span> 2 weeks / sprint</li>
+                        <li><span class="check">✓</span> Editor</li>
+                        <li><span class="check">✓</span> Motion Designer</li>
+                        <li><span class="check">✓</span> Project Manager</li>
+                        <li><span class="check">✓</span> Bi-weekly review meeting</li>
+                        <li><span class="check">✓</span> Unlimited revisions</li>
+                        <li><span class="check">✓</span> Pause or cancel anytime</li>
+                    </ul>
+                    <button class="plan-btn plan-btn--dark" data-plan="Basic">Get Started</button>
+                </div>
+
+                <!-- Growth -->
+                <div class="plan plan-growth">
+                    <div class="plan-badge plan-badge--purple">Growth</div>
+                    <p class="plan-tagline"><span class="plan-bar"></span> 25$</p>
+                    <ul class="plan-features">
+                        <li><span class="check">✓</span> 1 week / sprint</li>
+                        <li><span class="check">✓</span> Senior Editor</li>
+                        <li><span class="check">✓</span> Motion Designer</li>
+                        <li><span class="check">✓</span> Project Manager</li>
+                        <li><span class="check">✓</span> Weekly review meeting</li>
+                        <li><span class="check">✓</span> Unlimited revisions</li>
+                        <li><span class="check">✓</span> Pause or cancel anytime</li>
+                    </ul>
+                    <button class="plan-btn plan-btn--purple" data-plan="Growth">Get Started</button>
+                </div>
+
+                <!-- Enterprise -->
+                <div class="plan plan-enterprise">
+                    <div class="plan-badge plan-badge--light">Enterprise</div>
+                    <p class="plan-tagline"><span class="plan-bar plan-bar--light"></span> 40$</p>
+                    <ul class="plan-features">
+                        <li><span class="check">✓</span> Custom sprint</li>
+                        <li><span class="check">✓</span> 2 Senior Editors</li>
+                        <li><span class="check">✓</span> Motion Designer</li>
+                        <li><span class="check">✓</span> Project Manager</li>
+                        <li><span class="check">✓</span> Custom review meeting</li>
+                        <li><span class="check">✓</span> Unlimited revisions</li>
+                        <li><span class="check">✓</span> Pause or cancel anytime</li>
+                    </ul>
+                    <button class="plan-btn plan-btn--purple-outline" data-plan="Enterprise">Get Started</button>
+                </div>
+
+            </div>
+
+            <!-- Guarantee bar -->
+            <div class="guarantee">
+                <span class="guarantee-icon" aria-hidden="true">✓</span>
+                <p><strong>1st-Month Guarantee —</strong> If you are not 100% satisfied after the first month of working
+                    with us, you don't pay!</p>
+            </div>
+
+        </section>
+
+        <div class="divider" role="separator"></div>
+
+        <!-- ── MISSION ── -->
+        <section class="mission" aria-label="Our mission">
+
+            <div class="mission-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />
+                </svg>
+            </div>
+
+            <span class="mission-label">Mission</span>
+
+            <h2>Unlock Creative Power</h2>
+
+            <p>
+                Be among the first to explore powerful editing tools, cinematic presets,
+                and creative resources designed to elevate your content and help you stand out.
+            </p>
+
+            <p>Get Early Access.</p>
+
+            <div class="author">
+                <div class="author-avatar" aria-hidden="true">VD</div>
+                <div class="author-info">
+                    <strong>Vinayak Dalbanjan</strong>
+                    <span>CEO &amp; Co-founder, VYK</span>
+                </div>
+            </div>
+
+        </section>
+
     </div>
 
-    <section class="hero">
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-      <div class="logo-btn" title="VYK by Vinayak Dalbanjan">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="VYK Logo">
-          <path d="M13.827 3.52h3.603L12 20.48 8.58 3.52h3.604L12 10.49l1.827-6.97Z" fill="white" />
-          <path d="M6.994 3.52H3.39L.57 12l2.424 1.06L6.994 3.52Zm10.012 0h3.604L23.43 12l-2.424 1.06L17.006 3.52Z"
-            fill="white" opacity="0.5" />
-        </svg>
-      </div>
-
-      <p class="badge">
-        <span class="badge-dot" aria-hidden="true"></span>
-        VYK — a editing organization
-      </p>
-
-      <h1>High-level Editing for<br>Future of <em>Video Editing</em></h1>
-
-      <p class="hero-sub">
-        3+ years of experience in Adobe After Effects and Premiere Pro,
-        delivering professional video editing and motion graphics.
-      </p>
-
-      <div class="form-row">
-        <label for="emailInput" class="sr-only">Your Email</label>
-        <input type="email" id="emailInput" placeholder="Your Email" autocomplete="email" spellcheck="false" />
-        <button id="joinBtn" type="button">Register</button>
-      </div>
-
-      <p class="form-error" id="formError" role="alert" aria-live="polite"></p>
-
-      <div class="social-proof" aria-label="Social proof">
-        <div class="avatars" aria-hidden="true">
-          <span class="av av1">A</span>
-          <span class="av av2">B</span>
-          <span class="av av3">C</span>
-        </div>
-        Worked with 100+ Clients &amp; 10+ Agencies
-      </div>
-
-    </section>
-
-    <section class="features" aria-label="What we offer">
-
-      <div class="feature">
-        <div class="feature-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round"
-            stroke-linejoin="round">
-            <polygon points="23 7 16 12 23 17 23 7" />
-            <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
-          </svg>
-        </div>
-        <h3>Cinematic Editing</h3>
-        <p>Visually stunning edits with smooth transitions, color grading, and storytelling that feels like a movie.</p>
-      </div>
-
-      <div class="feature">
-        <div class="feature-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M5 3l14 9-14 9V3z" />
-          </svg>
-        </div>
-        <h3>Motion Graphics</h3>
-        <p>Dynamic animations, text effects, and high-quality VFX for impactful, eye-catching content.</p>
-      </div>
-
-      <div class="feature">
-        <div class="feature-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round"
-            stroke-linejoin="round">
-            <rect x="2" y="3" width="20" height="14" rx="2" />
-            <path d="M8 21h8M12 17v4" />
-          </svg>
-        </div>
-        <h3>Social Media Edits</h3>
-        <p>Optimized edits for Instagram, YouTube Shorts, and Reels — designed to grab attention and go viral.</p>
-      </div>
-
-    </section>
-
-    <div class="divider" role="separator"></div>
-
-    <section class="mission" aria-label="Our mission">
-
-      <div class="mission-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round"
-          stroke-linejoin="round">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />
-        </svg>
-      </div>
-
-      <span class="mission-label">Mission</span>
-
-      <h2>Unlock Creative Power</h2>
-
-      <p>
-        Be among the first to explore powerful editing tools, cinematic presets,
-        and creative resources designed to elevate your content and help you stand out.
-      </p>
-
-      <p>Get Early Access.</p>
-
-      <div class="author">
-        <div class="author-avatar" aria-hidden="true">VD</div>
-        <div class="author-info">
-          <strong>Vinayak Dalbanjan</strong>
-          <span>CEO &amp; Co-founder, VYK</span>
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
