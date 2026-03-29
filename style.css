@@ -1,8 +1,3 @@
-/* ─────────────────────────────────────────
-   style.css — VYK EDITZ Landing Page
-   ───────────────────────────────────────── */
-
-/* ─── RESET ─── */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -471,15 +466,207 @@ section {
   transform: translateX(-50%) translateY(0);
 }
 
+/* ─── PRICING SECTION ─── */
+.pricing {
+  background: var(--bg);
+  padding: 56px 24px 48px;
+  position: relative;
+  z-index: 1;
+}
+
+.pricing-header {
+  text-align: left;
+  margin-bottom: 36px;
+  padding: 0 8px;
+}
+
+.pricing-title {
+  font-size: clamp(24px, 5vw, 34px);
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.pricing-sub {
+  font-size: 15px;
+  color: var(--gray);
+  font-weight: 400;
+}
+
+/* Grid — 3 columns on desktop, stacks on mobile */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+/* ── Plan card base ── */
+.plan {
+  border-radius: 20px;
+  padding: 24px 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  animation: fadeUp 0.6s ease both;
+}
+
+.plan-basic     { background: var(--white); border: 1.5px solid var(--light-gray); animation-delay: 0.1s; }
+.plan-growth    { background: var(--white); border: 1.5px solid var(--light-gray); animation-delay: 0.2s; }
+.plan-enterprise{ background: #1a1a1a;      border: 1.5px solid #2a2a2a;           animation-delay: 0.3s; }
+
+/* ── Plan badge ── */
+.plan-badge {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 5px 14px;
+  margin-bottom: 18px;
+  width: fit-content;
+  letter-spacing: -0.01em;
+}
+
+.plan-badge--dark   { background: var(--black); color: var(--white); }
+.plan-badge--purple { background: #7c3aed;       color: var(--white); }
+.plan-badge--light  { background: #2d2d2d;       color: #e5e5e5; border: 1px solid #3a3a3a; }
+
+/* ── Tagline with left bar ── */
+.plan-tagline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 18px;
+}
+
+.plan-enterprise .plan-tagline { color: #e5e5e5; }
+
+.plan-bar {
+  display: inline-block;
+  width: 3px;
+  height: 16px;
+  background: var(--black);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.plan-bar--light { background: #555; }
+
+/* ── Feature list ── */
+.plan-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+  flex: 1;
+}
+
+.plan-features li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--black);
+  line-height: 1.4;
+}
+
+.plan-enterprise .plan-features li { color: #d4d4d4; }
+
+.check {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--black);
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.plan-enterprise .check { color: #aaa; }
+
+/* ── CTA buttons ── */
+.plan-btn {
+  width: 100%;
+  padding: 13px 0;
+  border-radius: 30px;
+  border: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: -0.01em;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.plan-btn:hover  { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+.plan-btn:active { transform: translateY(0);    box-shadow: none; }
+
+.plan-btn--dark          { background: var(--black); color: var(--white); }
+.plan-btn--purple        { background: #7c3aed;       color: var(--white); }
+.plan-btn--purple-outline{ background: #7c3aed;       color: var(--white); }
+
+/* ── Guarantee bar ── */
+.guarantee {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--white);
+  border: 1.5px solid var(--light-gray);
+  border-radius: 14px;
+  padding: 14px 18px;
+  animation: fadeUp 0.5s ease both 0.4s;
+}
+
+.guarantee-icon {
+  width: 22px; height: 22px;
+  background: #7c3aed;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+  line-height: 1;
+  padding-top: 1px;
+}
+
+.guarantee p {
+  font-size: 13px;
+  color: var(--gray);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.guarantee p strong {
+  color: var(--black);
+  font-weight: 600;
+}
+
 /* ─── RESPONSIVE ─── */
+@media (max-width: 620px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    margin: 0 auto 24px;
+  }
+}
+
 @media (max-width: 480px) {
   .hero { padding: 40px 20px 36px; }
   .mission { padding: 40px 24px 48px; }
   .mission-icon { right: 20px; top: 32px; }
+  .pricing { padding: 40px 16px 40px; }
 
   .form-row {
     max-width: 100%;
-    flex-direction: column;  /* stack input + button on very small screens */
+    flex-direction: column;
     border-radius: var(--radius-card);
   }
 
