@@ -1,2 +1,2 @@
-# Email-Regisiteration-page-VYK
-My first web page with validation using HTML,CSS and Javascript
+# EmailRegisiteration
+My name is Vinayak Dalbanjan from Hubli Karnataka.This is a page about email regisiteration and toasters
