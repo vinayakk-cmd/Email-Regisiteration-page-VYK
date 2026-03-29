@@ -1,11 +1,7 @@
-// ─────────────────────────────────────────
-//  script.js — VYK EDITZ Landing Page
-// ─────────────────────────────────────────
-
 (function () {
   "use strict";
 
-  /* ── DOM refs ── */
+  // DOM refs 
   const emailInput = document.getElementById("emailInput");
   const joinBtn    = document.getElementById("joinBtn");
   const toast      = document.getElementById("toast");
@@ -21,7 +17,7 @@
   /* ── State ── */
   let toastTimer   = null;
   let resetTimer   = null;
-  let isSubmitting = false;   // BUG FIX: prevent double-clicks
+  let isSubmitting = false;   
 
   /* ── Email validation ── */
   function isValidEmail(val) {
@@ -93,7 +89,7 @@
 
       // BUG FIX: clear old reset timer before setting a new one
       clearTimeout(resetTimer);
-      resetTimer = setTimeout(resetButton, 3000);
+      resetTimer = setTimeout(resetButton, 3200);
     }, 400); // small delay makes it feel async / real
   }
 
@@ -107,6 +103,47 @@
   // Clear error as user types
   emailInput.addEventListener("input", function () {
     if (formRow.classList.contains("error")) clearError();
+  });
+
+
+
+  const planBtns = document.querySelectorAll(".plan-btn");
+
+  planBtns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      const plan = btn.getAttribute("data-plan") || "this plan";
+
+      // Scroll to email form & focus it
+      emailInput.scrollIntoView({ behavior: "smooth", block: "center" });
+
+      // Pre-fill toast with plan name
+      showToast("✨ You picked the " + plan + " plan — enter your email above!");
+
+      // Highlight the form row briefly
+      setTimeout(function () {
+        formRow.style.boxShadow = "0 0 0 3px rgba(124,58,237,0.35)";
+        emailInput.focus();
+        setTimeout(function () {
+          formRow.style.boxShadow = "";
+        }, 1800);
+      }, 600);
+    });
+  });
+
+  /* ── Pricing card hover — subtle lift ── */
+  const plans = document.querySelectorAll(".plan");
+
+  plans.forEach(function (card) {
+    card.addEventListener("mouseenter", function () {
+      card.style.transform  = "translateY(-4px)";
+      card.style.transition = "transform 0.22s ease, box-shadow 0.22s ease";
+      card.style.boxShadow  = "0 12px 40px rgba(0,0,0,0.10)";
+    });
+
+    card.addEventListener("mouseleave", function () {
+      card.style.transform = "";
+      card.style.boxShadow = "";
+    });
   });
 
 })();
